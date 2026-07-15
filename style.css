@@ -1,8 +1,25 @@
-.tag{
-   color: #18ca71;
+body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
 }
 
-#title{
-   text-align: center;
-   color: #161515;
+.title {
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    margin: 0px;
+    text-align: center;
+    color:#515076;
+}
+
+.products-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.main-text {
+    color: #515076;
+    font-size: 13px;
+    line-height: 18px;
 }
