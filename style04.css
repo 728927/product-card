@@ -87,13 +87,16 @@ ul {
     margin-left: 155px;
 }
 .li-style {
-    display: inline-block;
+    display: block;
     padding: 25px;
     margin: 45px;
     width: 340px;
     height: 573px;
     background-color: #f7f7fa;
     border-bottom: 45px;  
+    border-top: 45px;
+    row-gap: 1px;
+    gap: 1px;
 }
 .ul-style {
     display: block;
@@ -105,4 +108,6 @@ ul {
     padding: 25px;
     margin: 25px;
     border-left: 5px;
+    column-gap: 1px;
+    row-gap: 1px ;
 }
