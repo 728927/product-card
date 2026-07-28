@@ -4,19 +4,27 @@
     box-sizing: border-box;
 }
 body {
+    display: block;
     font-family: "Montserrat", sans-serif;
     font-size: 13px;
     background-image: url(images/bg\ 1.png);
     background-repeat: no-repeat;
-    margin-left: 5px;
     color: #515076;
 }
-
+.background-image {
+    width: 790px;
+    height: 697px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    margin-left: 230px;
+}
 .body-style {
     display: inline-block;
-    border-width: 1280px;
+    border-width: 1110px;
     height: 1191px;
     background-color: #c4b9b9;
+    margin-bottom: 40px;
+    margin-left: 2px;
 }
 
 ul {
@@ -27,8 +35,10 @@ ul {
     font-size: 70px;
     font-weight: 400;
     line-height: 78px;
-    text-align:center;
-    margin-top: 220px;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 10px; 
+    margin-left: 150px;
 }
 
 .product-photo {
@@ -89,25 +99,25 @@ ul {
 .li-style {
     display: block;
     padding: 25px;
-    margin: 45px;
+    margin: 10px;
     width: 340px;
     height: 573px;
     background-color: #f7f7fa;
-    border-bottom: 45px;  
-    border-top: 45px;
-    row-gap: 1px;
-    gap: 1px;
+    margin-bottom: 5px;
+    margin-top: 15px;
 }
 .ul-style {
     display: block;
     border: medium solid #ffffff41;  
     background-color: #ffffff41;
+    margin-bottom: 20px;
+    margin-top: 130px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 25px;
-    margin: 25px;
-    border-left: 5px;
-    column-gap: 1px;
-    row-gap: 1px ;
+    width: 1230px;
+    height: 1300px;
+    margin-left: 220px;
 }
+
