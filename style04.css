@@ -83,7 +83,7 @@ ul {
 .li-style {
     display: block;
     padding: 25px;
-    margin: 10px;
+    margin: 25px;
     width: 340px;
     height: 573px;
     background-color: #f7f7fa;
@@ -97,6 +97,6 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     padding: 25px;
-    width: 1140px;
+    width: 1110p;
 }
 
