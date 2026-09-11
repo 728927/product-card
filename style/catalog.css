@@ -1,0 +1,30 @@
+.catalog__container{
+    background-image: url("/images/bg-flowers.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 790px;
+    color: #515076;
+    padding-top: 1px;
+}
+
+.catalog__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 78px;
+    text-align: center;
+    color: #515076;
+    margin-top: 220px;
+}
+
+.catalog__products-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+    width: 1310px;
+    margin: auto;
+    position: relative;  
+}
+
+
