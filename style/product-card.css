@@ -1,3 +1,12 @@
+.product-card {
+    display: block;
+    padding: 25px;
+    margin: 25px;
+    width: 340px;
+    height: 573px;
+    background-color: #f7f7fa;
+    font-family: "Montserrat", sans-serif;
+}
 
 .product-card__price {
     font-size: 20px;
