@@ -1,3 +1,5 @@
+//Покраска первой карточки
+
 const firstProductCard = document.querySelector(".card__item");
 const changeColorFirstCardButton = document.querySelector("#change-color-first-card");
 
