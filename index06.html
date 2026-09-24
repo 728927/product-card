@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Верстка всех карточек по БЭМ</title>
+  <title>Знакомство с JavaScript</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style05.css"> 
+  <link rel="stylesheet" href="main.js">
+  <link rel="stylesheet" href="style06.css"> 
+  <link rel="stylesheet" href="style/button.css">
   <link rel="stylesheet" href="style/price.css">
   <link rel="stylesheet" href="style/compound.css">
   <link rel="stylesheet" href="style/card.css">
@@ -19,8 +21,15 @@
 </head>
 <body>
     <main class="catalog">
+        <!-- Code injected by live-server-->
+        <script>Купить</script>
         <div class="catalog__container container">
             <h1 class="catalog__title main-title">Выбери свой продукт</h1>
+            <button id="change-color-card-button">Сменить цвет карточки</button>
+            <button id="change-color-all-card">Сменить цвет всех карточек</button>
+            <button id="change-color-first-card">Сменить цвет первой карточки</button>
+            <button id="open-google">Открыть страницу Google.com</button>
+            <button id="output-console-log">Вывести сообщение в консоль лог</button>
             <ul class="catalog__products-list clear-list">
                 <li class="card__item">
                     <img  src="images/product-mousse.png" alt="Увлажняющий мусс" class="card__image"> 
@@ -39,6 +48,7 @@
                         <b class="price__text">Цена</b> 
                         <span class="price__value">2750р</span>
                     </div>
+                    <button class="product-card__button button button__text">Купить</button>
                 </li>
               
      
@@ -59,6 +69,7 @@
                         <b class="price__text">Цена</b>
                         <span class="price__value">3 500р</span>
                     </div>
+                    <button class="product-card__button button button__text">Заказать</button>
                 </li>
      
                 <li class="card__item">
@@ -78,6 +89,7 @@
                         <b class="price__text">Цена</b>
                         <span class="price__value">1 650р</span>
                     </div>
+                    <button class="product-card__button button button__text">Получить бесплатно</button>
                 </li>
      
                 <li class="card__item">
@@ -97,6 +109,7 @@
                         <b class="price__text">Цена</b>
                         <span class="price__value">4 750р</span>
                     </div>
+                    <button class="product-card__button button button__text">Узнать больше</button>
                 </li>
     
                 <li class="card__item">
@@ -116,9 +129,11 @@
                         <b class="price__text">Цена</b> 
                         <span class="price__value">7 520р</span>
                     </div>
+                    <button class="product-card__button button button__text">Регистрация</button>
                 </li>  
             </ul>
         </div>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
