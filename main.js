@@ -2,18 +2,18 @@
 
 const firstProductCard = document.querySelector(".card__item");
 const changeColorFirstCardButton = document.querySelector("#change-color-first-card");
-
+const blueColorHash = "#0000ff"
 
 changeColorFirstCardButton.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = "blueColorHash"
+  firstProductCard.style.backgroundColor = blueColorHash
 })
 
 
-// Открыть Google 
+// Открыть Google Вы действительно хотите открыть Google? Работает этот код. 
 
 const openGoogleButton = document.querySelector("#open-google");
 
-openGoogleButton.addEventListener("click", () => {
+openGoogleButton.addEventListener("click", openGoogleButton.addEventListener("click", openGoogle),() => {
   window.open("https://google.com")
     })
     
