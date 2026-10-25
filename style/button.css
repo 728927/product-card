@@ -1,0 +1,12 @@
+.button {
+  display: block;
+  font-size: medium;
+  font-weight: 500;
+  color: #515076;
+  border-color: #ffffff;
+  width: 290px;
+  text-align: center;
+  line-height: 18px;
+  background-color: #f7f7fa;
+  font-family: "Montserrat", sans-serif;
+}
