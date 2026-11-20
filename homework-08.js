@@ -102,7 +102,7 @@ const books = [
     author: "Шайдоот",
     year: 2016,
     coverColor: "Белый",
-     genre: "Эзотерика",
+    genre: "Эзотерика",
     series: "Доор чакырыгы",
     publishingHouse: "Аалам"
   },
