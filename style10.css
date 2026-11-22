@@ -1,0 +1,20 @@
+* ,
+* ::before,
+* ::after {
+    box-sizing: border-box;
+}
+.body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #515076;
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+

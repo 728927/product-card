@@ -1,0 +1,458 @@
+HTML Template в JavaScript
+
+
+const numbers = [1, 2, 3, 4, 5]
+
+const sum = numbers.reduce((acc, num) => {
+  return acc + num;
+}, 0);
+
+console.log(sum); // 15
+
+0+1=1+2=3+3=6+4=10+5=15
+
+numbers - исходный массив чисел.
+.reduce(...) складывает элементы массива в аккумулятор acc,
+начиная с 0.
+Итоговое значение sum равно 15.
+Массив собрали в одно значение.
+----------------------------------------------
+
+
+Находим максимальное число.
+Для этого задаем условие.
+
+Если num текущее значение больше > предыдущего значения
+
+тогда возвращаем num, вернем самое большое знаяение.
+
+если нет, тогда возвращаем acc, чтобы потом взять и проверить это.
+---
+const numbers = [1, 2, 40, 3, 4, 50, 5, 10, 20]
+
+const sum = numbers.reduce((acc, num) => {
+  return num > acc ? num: acc
+}, 0);
+
+console.log(sum); // 50
+---
+
+В acc ставим 1, 2, 40 итд пока не закончится все 
+элементы массива и не найдем самого большо число.
+------------------------------------------------------
+
+
+
+Создаем массив где будет два объекта почта и имя.
+И продублируем его.
+И вернем массив всех имен, где у нас  был массив комменты.
+
+Добавляем на каждую литерацию его значение name пушим и 
+получаем его имя test и  test1.
+
+const users = [
+  {email: "test@mail.com", name: "test"},
+  {email: "test2@gmail.com", name: "test2"}
+]
+
+const names = users.reduce((acc, user) => {
+  acc.push(user.name);
+  return acc;
+}, []); / [] начальное значение. 
+        / acc предыдущее значение.
+        / user текущее значение.
+т.о проходим по массиву и собираем что-то.
+
+console.log(names); // (2) ["test", "test2"]
+
+если не пишем return // будет ошибка, потому чтобы
+acc не обновился, поэтому всегда что-то должно 
+возвращаться.
+---------------------------------------------------------
+
+
+
+1:09:00 Шаблоны. (Список карточек)
+
+Карточки товаров сверстали, а если их будут десятки тысяч?
+Люди же не верстали каждую карточку отдельно!!!!!!!
+
+И для этого в JS существует тег Template
+
+Скрипт позволяет нам с помощью определенных методов 
+совершать магию. 
+
+Создаем массив студентов:
+Когда студентов много, сто или тысячи, писать по одному 
+это тяжело.
+Поэтому существует тег Template
+
+Содержимое внутри тега Template не будет видно на странице,
+пока я вручную каждого не буду ставить.
+
+Template содержит каждого студента, создаем один раз и потом
+писать тысячи разных значений через JS.
+
+Создаем список где будут хранится список студентов.
+Создали.
+Первоначально нужно получить доступ к Template
+
+Создаем только структуру, а данные будем заполнять через JS/
+<p></P>
+<p></P>
+<p></P>
+<p></P>
+
+< !-- Куда будем добавлять студентов -- >
+  <ul id="student-list"></ul>
+
+  < ! -- Cам шаблон -- > 
+  <template id="student-template"> 
+
+  Типа как это создаем список карточек.
+
+  {
+    name: "Ибрагим",
+    surname: "Абдурагимов",
+    age: 15,
+    country: "Дагестан",
+    city: "Буйнакск",
+    height: 168
+  },
+]
+
+const studentTemplate = document.getElementById("student-template");
+const studentList = document.getElementById("student-list");
+
+console.log(studentTemplate)
+
+getElementById - Получить элементы по id
+
+Весь список студентов нужно положит с список <p></p> 
+
+Что дудем делать?
+
+Массиву students будем использовать forEach 
+и мы должны получить копию студентов.
+
+const studentTemplate = document.getElementById("student-template");
+const studentList = document.getElementById("student-list");
+
+students.forEach(student => {
+  const studentClone = studentTemplate.content.cloneNode(true);
+
+  console.log(studentClone) // вывелось 4 документа клона 
+})
+---------------------------------------------------------------------------------
+
+
+1. Список продуктов взяли studentList 
+2. Шаблон карточек взяли по которому создаем список карточек studentTemplate
+3. Берем массив студентов и на основе шаблона клонируем (name, age)
+4. Наполняем его данными. studentClone.querySelector(".student-name") итд
+5. В список ul добавляем li шки
+6. На выходе получаем Амир Адилов итд
+7. В HTML не ввели ни одной строки, тем не менее отобразился список студентов.
+8. Так оно работает.
+9. В массиве 4 элемента и в консоль вышла 4 литерации.
+
+
+const students = [
+  {
+    name: "Амир",
+    surname: "Адилов",
+    age: 23,
+    country: "Россия",
+    city: "Каспийск",
+    height: 168
+  },
+  {
+    name: "Никматулло",
+    surname: "Никматулло",
+    age: 20,
+    country: "Россия",
+    city: "Новосибирск",
+    height: 185
+  },
+  {
+    name: "Шамиль",
+    surname: "Мусаидов",
+    age: 35,
+    country: "Дагестан",
+    city: "Хасавюрт",
+    height: 168
+  },
+  {
+    name: "Ибрагим",
+    surname: "Абдурагимов",
+    age: 15,
+    country: "Дагестан",
+    city: "Буйнакск",
+    height: 168
+  },
+]
+
+const studentTemplate = document.getElementById("student-template");
+const studentList = document.getElementById("student-list");
+
+students.forEach(student => {
+  const studentClone = studentTemplate.content.cloneNode(true);
+  studentClone.querySelector(".student-name").textContent = student.name
+  studentClone.querySelector(".student-surname").textContent = student.surname
+  studentClone.querySelector(".student-age").textContent = student.age
+  studentClone.querySelector(".student-country").textContent = student.country
+  studentClone.querySelector(".student-city").textContent = student.city
+  studentClone.querySelector(".student-height").textContent = student.height
+  studentList.appendChild(studentClone)
+  console.log(studentList)
+})
+
+// 4 раза литерации (когда консоль внутри скобки)
+----------------------------------------------------------------
+
+<ul id="student-list"></ul>
+
+  
+  <template id="student-template">
+    <li>
+      <p class="student-name"></p>
+      <p class="student-surname"></p>
+      <p class="student-age"></p>
+      <p class="student-country"></p>
+      <p class="student-city"></p>
+      <p class="student-height"></p>
+    </li>
+  </template>
+
+ <script type="module" src="homework-10.js"></script>  
+</body>
+</html>
+-----------------------------------------------------------------
+
+Амир
+
+Адилов
+
+23
+
+Россия
+
+Каспийск
+
+168
+
+Никматулло
+
+Никматулло
+
+20
+
+Россия
+
+Новосибирск
+
+185
+
+Шамиль
+
+Мусаидов
+
+35
+
+Дагестан
+
+Хасавюрт
+
+168
+
+Ибрагим
+
+Абдурагимов
+
+15
+
+Дагестан
+
+Буйнакск
+
+168
+---------------------------
+
+ {
+    name: "Ибрагим",
+    surname: "Абдурагимов",
+    age: 15,
+    country: "Дагестан",
+    city: "Буйнакск",
+    height: 168
+  },
+]
+
+const studentTemplate = document.getElementById("student-template");
+const studentList = document.getElementById("student-list");
+
+students.forEach(student => {
+  const studentClone = studentTemplate.content.cloneNode(true);
+  studentClone.querySelector(".student-name").textContent = student.name
+  studentClone.querySelector(".student-surname").textContent = student.surname
+  studentClone.querySelector(".student-age").textContent = student.age
+  studentClone.querySelector(".student-country").textContent = student.country
+  studentClone.querySelector(".student-city").textContent = student.city
+  studentClone.querySelector(".student-height").textContent = student.height
+  studentList.appendChild(studentClone)
+  
+})
+
+  console.log(studentList) 
+
+Консоль вне скобки список четырех студентов.
+---------------------------------------------------------------------------
+
+
+Стилизация. style10.class
+--------------------------------------------------------------------------
+
+ДЗ - 10.
+
+1. Стилизация карточек.
+
+Создаем массив карточек
+Ключи: Свойства
+
+Используем Template
+------------------------
+
+2. Подумать как оптимизировать последний код, где 
+очень много дублирований.
+
+------------------------
+
+3. Работать с reduce
+
+------------------------
+
+4. Задача с функциями.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

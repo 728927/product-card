@@ -1,17 +1,19 @@
-.compound__item {
+.compound {
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
-    margin-left: 0px;
 }
+
 .compound__name {
-    margin-left: 0px;
-    width: 49px;
-} 
+    display: block;
+}
+
 .compound__list {
-    list-style-type: list;
-    margin-left: 15px;
-    list-style: circle;
+    list-style-type: circle;
+    margin: 5px 0 0 15px;
     padding-left: 0px;
 }
 
+.compound__item {
+    margin-left: 0;
+}
