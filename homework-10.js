@@ -49,7 +49,7 @@ renderProducts(products);
 
 // 3. Функция запроса количества карточек с проверкой.
 const getCardsCount = () => {
-  const userInput = promt('Сколько карточек отобразить? От 1 до 5');
+  const userInput = prompt('Сколько карточек отобразить? От 1 до 5');
 
   if (userInput === null || userInput.trim() === '') {
     alert('Вы не ввели число. будут отображены все 5 карточек.');
