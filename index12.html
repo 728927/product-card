@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework-12</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style/container.css">
+  <link rel="stylesheet" href="style/clear-list.css">
+  <link rel="stylesheet" href="style/main-title.css">
+  <link rel="stylesheet" href="style/catalog.css">
+  <link rel="stylesheet" href="style/product-card.css">
+  <link rel="stylesheet" href="style/compound.css">
+  <link rel="stylesheet" href="style/price.css">
+  <link rel="stylesheet" href="style11.css">
+
+  
+</head>
+<body>
+    <main class="catalog">
+        <div class="catalog__container container">
+          <button class="register-open-btn" type="button">Регистрация</button>
+            <h1 class="catalog__title main-title">Выбери свой продукт</h1>
+            <ul class="catalog__products-list clear-list"></ul>
+        </div>
+    </main>
+
+     <template id="product-card-template">
+      <li class="catalog__item product-card">
+        <img src="" alt="" class="product-card__image">
+        <span class="product-card__category"></span>
+        <h2 class="product-card__name"></h2>
+        <p class="product-card__description"></p>
+        <div class="product-card__compound compound">
+            <span class="compound__name">Состав:</span>
+            <ul class="compound__list"></ul>
+        </div>
+        <div class="product-card__price price">
+            <b class="price__text">Цена</b>
+            <span class="price__value"></span>
+        </div>
+      </li>
+    </template>
+
+    
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__top">
+        <!-- Левая колонка -->
+         <div class="footer__info">
+           <a class="footer__logo" href="#">Product Card</a>
+           <p class="footer__description">У Нас Самые Лучшие Продукты Для Кожи</p>
+           <ul class="footer__socials socials clear-list">
+             <li class="social__item">
+               <a class="socials__link" href="#" aria-label="Telegram">
+                 <img class="socials__icon socials__icon--telegram" src="images/telegram.svg" alt="">  
+               </a>
+             </li>
+             <li class="socials__item">
+               <a class="socials__link" href="#" aria-label="ВКонтакте">
+                 <img class="socials__icon socials__icon--vk" src="images/vk.svg" alt="">
+               </a>
+             </li>
+           </ul>
+         </div>
+       
+      <!-- Центральная колонка -->
+      <div class="footer__subscribe">
+         <p class="footer__subscribe-title">Подпишись на наши акции</p>
+         <form class="footer__form subscribe-form" id="subscribe-form" action="#">
+           <input class="subscribe-form__input" type="email" name="email" placeholder="Введи Email..." required>
+           <button class="subscribe-form__button" type="submit">Подписаться</button>   
+         </form>
+      </div>
+
+
+      <!-- Правая колонка-->
+      <div class="footer__nav">
+          <h3 class="footer__title">Быстрые ссылки</h3>
+          <ul class="footer__menu clear-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Главная</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Магазин</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    
+
+      <!-- Нижняя часть с линией и копирайтом -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">www.product-cards.com &copy; all right reserve</p>   
+      </div>    
+    </div>
+  </footer>
+  <div class="overlay">
+  <div class="modal" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal__close" type="button" aria-label="Закрыть окно">&times;</button>
+    <h2 class="modal__title" id="modal-title">Регистрация</h2>
+
+    <form class="register-form" novalidate>
+      <div class="register-form__field">
+        <label class="register-form__label" for="reg-name">Имя</label>
+        <input class="register-form__input" id="reg-name" name="name" type="text" placeholder="Введите имя" required>
+      </div>
+
+      <div class="register-form__field">
+        <label class="register-form__label" for="reg-surname">Фамилия</label>
+        <input class="register-form__input" id="reg-surname" name="surname" type="text" placeholder="Введите фамилию" required>
+      </div>
+
+      <div class="register-form__field">
+        <label class="register-form__label" for="reg-birth">Дата рождения</label>
+        <input class="register-form__input" id="reg-birth" name="birthDate" type="date" required>
+      </div>
+
+      <div class="register-form__field">
+        <label class="register-form__label" for="reg-login">Логин</label>
+        <input class="register-form__input" id="reg-login" name="login" type="text" placeholder="Придумайте логин" minlength="3" required>
+      </div>
+
+      <div class="register-form__field">
+        <label class="register-form__label" for="reg-password">Пароль</label>
+        <input class="register-form__input" id="reg-password" name="password" type="password" placeholder="Минимум 6 символов" minlength="6" required>
+      </div>
+
+      <div class="register-form__field">
+        <label class="register-form__label" for="reg-repeat-password">Повторение пароля</label>
+        <input class="register-form__input" id="reg-repeat-password" name="repeatPassword" type="password" placeholder="Повторите пароль" minlength="6" required>
+      </div>
+
+      <button class="register-form__submit" type="submit">Зарегистрироваться</button>
+    </form>
+  </div>
+</div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
